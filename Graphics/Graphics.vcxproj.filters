@@ -39,6 +39,12 @@
     <ClCompile Include="common.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="circle.cpp">
+      <Filter>源文件\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="ellipse.cpp">
+      <Filter>源文件\graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
@@ -54,6 +60,12 @@
       <Filter>头文件\graph</Filter>
     </ClInclude>
     <ClInclude Include="point.h">
+      <Filter>头文件\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="circle.h">
+      <Filter>头文件\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="ellipse.h">
       <Filter>头文件\graph</Filter>
     </ClInclude>
   </ItemGroup>

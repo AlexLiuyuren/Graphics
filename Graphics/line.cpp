@@ -5,6 +5,7 @@
 using namespace std;
  Line Line::generateLine() {
 	cout << "Please input the coordinates of ends of line: x1 y1 x2 y2(should be integers)" << endl;
+	cout << "Coordinates shouldn't exceed 320 320, which is the size of the screen." << endl;
 	cout << "e.g.: 0 0 200 200" << endl;
 	int x1, y1, x2, y2;
 	cin >> x1 >> y1 >> x2 >> y2;

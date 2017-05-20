@@ -146,16 +146,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="circle.cpp" />
     <ClCompile Include="common.cpp" />
     <ClCompile Include="draw.cpp" />
+    <ClCompile Include="ellipse.cpp" />
     <ClCompile Include="line.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="monitor.cpp" />
     <ClCompile Include="Point.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="circle.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="draw.h" />
+    <ClInclude Include="ellipse.h" />
     <ClInclude Include="line.h" />
     <ClInclude Include="monitor.h" />
     <ClInclude Include="point.h" />
