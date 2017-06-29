@@ -33,9 +33,6 @@
     <ClCompile Include="line.cpp">
       <Filter>源文件\graph</Filter>
     </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>源文件\graph</Filter>
-    </ClCompile>
     <ClCompile Include="common.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -44,6 +41,39 @@
     </ClCompile>
     <ClCompile Include="ellipse.cpp">
       <Filter>源文件\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="point.cpp">
+      <Filter>源文件\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="polygon.cpp">
+      <Filter>源文件\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="rectangle.cpp">
+      <Filter>源文件\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="shape.cpp">
+      <Filter>源文件\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="bezier.cpp">
+      <Filter>源文件\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Bspline.cpp">
+      <Filter>源文件\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="transform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="board.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="3d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bmp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cut.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +97,39 @@
     </ClInclude>
     <ClInclude Include="ellipse.h">
       <Filter>头文件\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="polygon.h">
+      <Filter>头文件\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="shape.h">
+      <Filter>头文件\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="rectangle.h">
+      <Filter>头文件\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="bezier.h">
+      <Filter>头文件\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Bspline.h">
+      <Filter>头文件\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="board.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="transform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="3d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cut.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

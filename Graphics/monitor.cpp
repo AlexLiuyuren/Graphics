@@ -1,12 +1,14 @@
 #include "monitor.h"
 #include "draw.h"
 #include "gl/glut.h"
-
+#include "transform.h"
+#include "bmp.h"
+#include "cut.h"
 void Monitor::monitor(void) {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glFlush();
-	welcome();
 	while (1) {
+		welcome();
 		string command;
 		cin >> command;
 		commandFactory(command);
@@ -21,6 +23,19 @@ void Monitor::commandFactory(string command) {
 	else if (command == "draw") {
 		Draw dd;
 		dd.draw();
+	}
+	else if (command == "transform") {
+		Transform tt;
+		tt.transform();
+	}
+	else if (command == "import") {
+		cmdImport();
+	}
+	else if (command == "export") {
+		cmdExport();
+	}
+	else if (command == "cut") {
+		cmdCut();
 	}
 	else if (command == "clear") {
 		clear();
@@ -40,6 +55,10 @@ void Monitor::welcome() {
 void Monitor::help() {
 	cout << "help: Show all commands" << endl;
 	cout << "draw: Draw graphs" << endl;
+	cout << "transform: tansform shapes" << endl;
+	cout << "cut: cut shapes" << endl;
+	cout << "import: import a .bmp picture" << endl;
+	cout << "export: export a .bmp picture" << endl;
 	cout << "clear: Clear the command line window" << endl;
 	cout << "exit: Exit program" << endl;
 	return;

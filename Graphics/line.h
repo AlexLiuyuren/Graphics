@@ -1,10 +1,12 @@
 #pragma once
 #include "gl/glut.h"
-class Line {
-private:
-	int x1, y1, x2, y2;
+#include "point.h"
+#include "shape.h"
+
+class Line : public Shape{
 public:
-	Line(int x1, int y1, int x2, int y2) : x1(x1), y1(y1), x2(x2), y2(y2) {};
+	Point p1, p2;
+	Line(Point p1, Point p2) : p1(p1), p2(p2) {};
 	static Line generateLine();
-	void drawLine();
+	Points border();
 };

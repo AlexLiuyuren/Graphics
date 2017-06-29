@@ -9,21 +9,24 @@ Ellipse Ellipse::generateEllipse() {
 	cout << "e.g.: 200 200 50 100" << endl;
 	int x, y, rx, ry;
 	cin >> x >> y >> rx >> ry;
-	Ellipse e(x, y, rx, ry);
+	Ellipse e(Point(x, y), rx, ry);
+	e.points = e.border();
+	e.name = "ellipse";
 	return e;
 }
-void Ellipse::drawEllipse() {
-	vector<Point> points;
+
+Points Ellipse::border(){
+	Points points;
 	double p1 = ry * ry - rx * rx * ry + (double)rx * rx / 4.0;
 	int xt = 0, yt = ry;
 	int xold = xt, yold = yt;
 	while (ry * ry * xt < rx * rx * yt) {
 		xold = xt;
 		yold = yt;
-		Point po1(xt + x, yt + y);
-		Point po2(-xt + x, yt + y);
-		Point po3(xt + x, -yt + y);
-		Point po4(-xt + x, -yt + y);
+		Point po1(xt + center.x, yt + center.y);
+		Point po2(-xt + center.x, yt + center.y);
+		Point po3(xt + center.x, -yt + center.y);
+		Point po4(-xt + center.x, -yt + center.y);
 		points.push_back(po1);
 		points.push_back(po2);
 		points.push_back(po3);
@@ -50,17 +53,14 @@ void Ellipse::drawEllipse() {
 			yt--;
 			p2 += 2 * ry * ry * xt - 2 * rx * rx * yt + rx * rx;
 		}
-		Point po1(xt + x, yt + y);
-		Point po2(-xt + x, yt + y);
-		Point po3(xt + x, -yt + y);
-		Point po4(-xt + x, -yt + y);
+		Point po1(xt + center.x, yt + center.y);
+		Point po2(-xt + center.x, yt + center.y);
+		Point po3(xt + center.x, -yt + center.y);
+		Point po4(-xt + center.x, -yt + center.y);
 		points.push_back(po1);
 		points.push_back(po2);
 		points.push_back(po3);
 		points.push_back(po4);
 	}
-	for (auto val : points) {
-		val.drawPoint();
-	}
-	return;
+	return points;
 }

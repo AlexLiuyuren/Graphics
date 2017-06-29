@@ -1,11 +1,12 @@
 #pragma once
 #include "gl/glut.h"
-class Ellipse {
-private:
-	int x, y, rx, ry;
+#include "shape.h"
+class Ellipse : public Shape{
 public:
-	Ellipse(int x, int y, int rx, int ry) : x(x), y(y), rx(rx), ry(ry) {};
+	Point center;
+	int rx, ry;
+	Ellipse(Point c, int rx, int ry) : center(c), rx(rx), ry(ry) {};
 	Ellipse() {};
+	Points border();
 	static Ellipse generateEllipse();
-	void drawEllipse();
 };

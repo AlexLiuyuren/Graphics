@@ -1,7 +1,8 @@
+#pragma once
 #include "circle.h"
 #include "point.h"
 #include "common.h"
-
+#include "shape.h"
 using namespace std;
 
 Circle Circle::generateCircle() {
@@ -9,23 +10,25 @@ Circle Circle::generateCircle() {
 	cout << "e.g.: 100 100 50" << endl;
 	int x, y, r;
 	cin >> x >> y >> r;
-	Circle c(x, y, r);
+	Circle c(Point(x, y), r);
+	c.points = c.border();
+	c.name = "circle";
 	return c;
 }
 
-void Circle::drawCircle() {
+Points Circle::border() {
 	int xt = 0, yt = r;
 	vector<Point> points;
 	float pp = 1.25 - r;
 	while (xt <= yt) {
-		Point p1(xt + x, yt + y);
-		Point p2(yt + x, xt + y);
-		Point p3(-xt + x, yt + y);
-		Point p4(-yt + x, xt + y);
-		Point p5(xt + x, -yt + y);
-		Point p6(yt + x, -xt + y);
-		Point p7(-xt + x, -yt + y);
-		Point p8(-yt + x, -xt + y);
+		Point p1(xt + center.x, yt + center.y);
+		Point p2(yt + center.x, xt + center.y);
+		Point p3(-xt + center.x, yt + center.y);
+		Point p4(-yt + center.x, xt + center.y);
+		Point p5(xt + center.x, -yt + center.y);
+		Point p6(yt + center.x, -xt + center.y);
+		Point p7(-xt + center.x, -yt + center.y);
+		Point p8(-yt + center.x, -xt + center.y);
 		points.push_back(p1);
 		points.push_back(p2);
 		points.push_back(p3);
@@ -44,8 +47,5 @@ void Circle::drawCircle() {
 			pp += 2 * xt + 1 - 2 * yt;
 		}
 	}
-	for (auto val : points) {
-		val.drawPoint();
-	}
-	return;
+	return points;
 }
